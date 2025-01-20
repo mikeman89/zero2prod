@@ -1,5 +1,5 @@
 # Use the Rust stable release build at time of writing Zero to Production in Rust
-FROM rust:1.72.0
+FROM rust:1.81.0
 # Change working director to "app"
 WORKDIR /app
 # Install system dependencies
