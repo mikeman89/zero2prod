@@ -6,6 +6,8 @@ WORKDIR /app
 RUN apt update && apt install lld clang -y
 # copy files into the container
 COPY . .
+# set environment variable to set sqlx to offline mode
+ENV SQLX_OFFLINE=true
 # build the rust binary in release mode
 RUN cargo build --release
 # launch the binary when "docker run" is executed
