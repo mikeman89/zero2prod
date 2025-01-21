@@ -7,8 +7,8 @@ RUN apt update && apt install lld clang -y
 # copy files into the container
 COPY . .
 # set environment variables
-ENV SQLX_OFFLINE true
-ENV APP_ENVIRONMENT production
+ENV SQLX_OFFLINE=true
+ENV APP_ENVIRONMENT=production
 # build the rust binary in release mode
 RUN cargo build --release
 # launch the binary when "docker run" is executed
